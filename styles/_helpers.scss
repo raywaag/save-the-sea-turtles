@@ -1,0 +1,411 @@
+// importing the styleguide so I can use its variables here
+@import "styleguide.scss";
+
+/* 
+These are utility classes that you can put in elements while 
+your coding so you don't have excess styles in your .scss files
+
+And it'll save you time / hassle
+*/
+
+/*
+/////////////////////////////
+TEXT COLOR
+/////////////////////////////
+*/
+.text-color--base-black {
+  color: $base-black;
+}
+.text-color--base-gray {
+  color: $base-gray;
+}
+.text-color--primary-blue {
+  color: $primary-blue;
+}
+.text-color--secondary-blue {
+  color: $secondary-blue;
+}
+.text-color--maple {
+  color: $maple;
+}
+.text-color--white {
+  color: $white;
+}
+
+.text-color--error {
+  color: $error;
+}
+.text-color--warning {
+  color: $warning;
+}
+.text-color--success {
+  color: $success;
+}
+
+/*
+/////////////////////////////
+PADDING
+/////////////////////////////
+*/
+
+// horizontal
+.padding-horizontal--10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.padding-horizontal--15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.padding-horizontal--20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.padding-horizontal--25 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.padding-horizontal--30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// vertical
+.padding-vertical--10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.padding-vertical--15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.padding-vertical--20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.padding-vertical--25 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.padding-vertical--30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// left only
+.padding-left--10 {
+  padding-left: 10px;
+}
+.padding-left--15 {
+  padding-left: 15px;
+}
+.padding-left--20 {
+  padding-left: 20px;
+}
+.padding-left--25 {
+  padding-left: 25px;
+}
+.padding-left--30 {
+  padding-left: 30px;
+}
+
+// right only
+.padding-right--10 {
+  padding-right: 10px;
+}
+.padding-right--15 {
+  padding-right: 15px;
+}
+.padding-right--20 {
+  padding-right: 20px;
+}
+.padding-right--25 {
+  padding-right: 25px;
+}
+.padding-right--30 {
+  padding-right: 30px;
+}
+
+// top only
+.padding-top--10 {
+  padding-top: 10px;
+}
+.padding-top--15 {
+  padding-top: 15px;
+}
+.padding-top--20 {
+  padding-top: 20px;
+}
+.padding-top--25 {
+  padding-top: 25px;
+}
+.padding-top--30 {
+  padding-top: 30px;
+}
+
+// bottom only
+.padding-bottom--10 {
+  padding-bottom: 10px;
+}
+.padding-bottom--15 {
+  padding-bottom: 15px;
+}
+.padding-bottom--20 {
+  padding-bottom: 20px;
+}
+.padding-bottom--25 {
+  padding-bottom: 25px;
+}
+.padding-bottom--30 {
+  padding-bottom: 30px;
+}
+/*
+/////////////////////////////
+MARGIN
+/////////////////////////////
+*/
+
+// horizontal
+.margin-horizontal--10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.margin-horizontal--20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.margin-horizontal--30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.margin-horizontal--40 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.margin-horizontal--50 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.margin-horizontal--60 {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.margin-horizontal--70 {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.margin-horizontal--80 {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.margin-horizontal--90 {
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.margin-horizontal--100 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+// vertical
+.margin-vertical--10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.margin-vertical--20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.margin-vertical--30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.margin-vertical--40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.margin-vertical--50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.margin-vertical--60 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.margin-vertical--70 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.margin-vertical--80 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.margin-vertical--90 {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+.margin-vertical--100 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+// left only
+.margin-left--10 {
+  margin-left: 10px;
+}
+.margin-left--20 {
+  margin-left: 20px;
+}
+.margin-left--30 {
+  margin-left: 30px;
+}
+.margin-left--40 {
+  margin-left: 40px;
+}
+.margin-left--50 {
+  margin-left: 50px;
+}
+.margin-left--60 {
+  margin-left: 60px;
+}
+.margin-left--70 {
+  margin-left: 70px;
+}
+.margin-left--80 {
+  margin-left: 80px;
+}
+.margin-left--90 {
+  margin-left: 90px;
+}
+.margin-left--100 {
+  margin-left: 100px;
+}
+
+// right only
+.margin-right--10 {
+  margin-right: 10px;
+}
+.margin-right--20 {
+  margin-right: 20px;
+}
+.margin-right--30 {
+  margin-right: 30px;
+}
+.margin-right--40 {
+  margin-right: 40px;
+}
+.margin-right--50 {
+  margin-right: 50px;
+}
+.margin-right--60 {
+  margin-right: 60px;
+}
+.margin-right--70 {
+  margin-right: 70px;
+}
+.margin-right--80 {
+  margin-right: 80px;
+}
+.margin-right--90 {
+  margin-right: 90px;
+}
+.margin-right--100 {
+  margin-right: 100px;
+}
+
+// top only
+.margin-top--10 {
+  margin-top: 10px;
+}
+.margin-top--20 {
+  margin-top: 20px;
+}
+.margin-top--30 {
+  margin-top: 30px;
+}
+.margin-top--40 {
+  margin-top: 40px;
+}
+.margin-top--50 {
+  margin-top: 50px;
+}
+.margin-top--60 {
+  margin-top: 60px;
+}
+.margin-top--70 {
+  margin-top: 70px;
+}
+.margin-top--80 {
+  margin-top: 80px;
+}
+.margin-top--90 {
+  margin-top: 90px;
+}
+.margin-top--100 {
+  margin-top: 100px;
+}
+
+// bottom only
+.margin-bottom--10 {
+  margin-bottom: 10px;
+}
+.margin-bottom--20 {
+  margin-bottom: 20px;
+}
+.margin-bottom--30 {
+  margin-bottom: 30px;
+}
+.margin-bottom--40 {
+  margin-bottom: 40px;
+}
+.margin-bottom--50 {
+  margin-bottom: 50px;
+}
+.margin-bottom--60 {
+  margin-bottom: 60px;
+}
+.margin-bottom--70 {
+  margin-bottom: 70px;
+}
+.margin-bottom--80 {
+  margin-bottom: 80px;
+}
+.margin-bottom--90 {
+  margin-top: 90px;
+}
+.margin-bottom--100 {
+  margin-top: 100px;
+}
+
+/*
+/////////////////////////////
+TEXT ALIGNMENT
+/////////////////////////////
+*/
+.text-align--center {
+  text-align: center;
+}
+.text-align--left {
+  text-align: left;
+}
+.text-align--right {
+  text-align: right;
+}
+
+/*
+/////////////////////////////
+BG COLOR
+/////////////////////////////
+*/
+.bg-dark {
+  background-color: $base-black;
+}
+
+/*
+/////////////////////////////
+FLEXBOX HELPERS
+/////////////////////////////
+*/
+.justify-content--center {
+  justify-content: center;
+}

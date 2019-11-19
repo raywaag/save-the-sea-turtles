@@ -1,0 +1,464 @@
+.turtle-header {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 70px;
+  @media (max-width: 780px) {
+    padding: 25px;
+  }
+
+  &--content {
+    padding: 0px 80px;
+    @media (max-width: 780px) {
+      padding: 0px;
+    }
+
+    &-title {
+      color: $white;
+      font-size: 4rem;
+      line-height: 1.2em;
+      margin: 0;
+
+      @media (min-width: 780px) and (max-width: 1150px) {
+        font-size: 3.2rem;
+      }
+
+      @media (max-width: 780px) {
+        font-size: 2.5rem;
+      }
+    }
+    &-subtitle {
+      color: $white;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      @media (min-width: 780px) and (max-width: 1150px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 780px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-404 {
+      color: $white;
+      font-size: 6rem;
+      line-height: 0em;
+
+      &__subtitle {
+        line-height: 1em;
+      }
+    }
+
+    .turtle-404 {
+      @media (max-width: 768px) {
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+    }
+
+    &-image {
+      position: absolute;
+      margin-left: -300px;
+      margin-top: -240px;
+      width: 140%;
+      height: auto;
+
+      @media (max-width: 1090px) {
+        margin-left: -250px;
+        width: 150%;
+        height: auto;
+      }
+      @media (max-width: 890px) {
+        margin-left: -200px;
+        width: 160%;
+        height: auto;
+      }
+      @media (max-width: 780px) {
+        margin-left: -250px;
+      }
+
+      &-article {
+        margin-top: -190px;
+      }
+    }
+
+    &-secondary-title {
+      color: $base-black;
+      font-size: 3.9rem;
+      line-height: 1.4em;
+      margin: 0;
+      @media (max-width: 1090px) {
+        font-size: 3rem;
+      }
+      @media (max-width: 890px) {
+        font-size: 2.7rem;
+      }
+    }
+  }
+
+  &--store {
+    background-image: url("../images/store/header-store.png");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &--home {
+    background-image: url("../images/headers/home_header.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &--news {
+    background-image: url("../images/headers/Header-News.png");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &--society {
+    background-image: url("../images/headers/elite-turtle-society-header.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &--404 {
+    background-image: url("../images/headers/404-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    @media (max-width: 768px) {
+      background-image: url("../images/headers/404-bgONSMALL.png");
+    }
+  }
+}
+
+.turtle-main-content {
+  padding: 40px 120px;
+  @media (max-width: 780px) {
+    padding: 25px;
+  }
+}
+
+.turtle-icon-grid {
+  padding: 60px 200px 90px 200px;
+  @media (max-width: 780px) {
+    padding: 0px 25px 30px 25px;
+
+    div {
+      margin-top: 60px;
+    }
+  }
+}
+
+.turtle-icon-row {
+  padding: 60px 100px;
+  @media (max-width: 991.98px) {
+    text-align: center;
+    padding: 0px 80px 100px 80px;
+    div img {
+      margin-top: 100px;
+    }
+  }
+  @media (max-width: 780px) {
+    padding: 0px 60px 100px 60px;
+  }
+}
+
+.turtle-facts-heading {
+  background-color: $secondary-blue;
+  padding: 15px 15px 15px 200px;
+  width: 50%;
+  text-align: left;
+  @media (max-width: 780px) {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+}
+
+.turtle-donate-bar {
+  width: 100%;
+  background-image: url("../images/headers/donatebar-bg.png");
+  background-size: cover;
+  background-position: center center;
+  padding: 40px 120px;
+  height: 433px;
+
+  h1 {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    padding-left: 0;
+  }
+
+  @media (max-width: 780px) {
+    padding: 25px;
+  }
+}
+
+.turtle-partnerships {
+  width: 100%;
+  padding: 40px 120px;
+  @media (max-width: 780px) {
+    padding: 25px;
+  }
+
+  img {
+    padding: 15px;
+  }
+}
+
+.turtle-footer {
+  width: 100%;
+  padding: 40px 120px;
+  @media (max-width: 780px) {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .turtle-footer--social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 780px) {
+      padding: 25px;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $secondary-blue;
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.turtle-heading {
+  text-transform: uppercase;
+  border-bottom: 11px solid $secondary-blue;
+  text-align: right;
+  padding: {
+    top: 5px;
+    bottom: 5px;
+  }
+  width: 40%;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.turtle-team {
+  background-image: url("../images/headers/team_bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 3000px 100%;
+
+  text-align: center;
+  padding: 0% 9%;
+
+  @media (max-width: 780px) {
+    padding: 2% 10%;
+    margin-top: 20px;
+    font-size: 0.7rem;
+
+    div {
+      margin-top: 35px;
+      padding: 5px 0px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 2% 0%;
+  }
+
+  div {
+    padding: 10px 15px;
+  }
+}
+
+.turtle-home-icons {
+  align-items: center;
+  padding: 40px 80px;
+  @media (max-width: 780px) {
+    text-align: center;
+    padding: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-black;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $highlight-on-light;
+    }
+  }
+}
+
+/////////// IMAGE GRID
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+// four columns
+.image-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
+// two columns on smaller screen
+@media screen and (max-width: 800px) {
+  .image-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+// ARTICLES
+.turtle-article {
+  @media screen and (max-width: 1250px) {
+    font-size: 0.8rem;
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $base-black;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $highlight-on-light;
+    }
+  }
+
+  &--image {
+    width: 100%;
+    height: auto;
+    @media screen and (max-width: 990px) {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// MODAL
+.turtle-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  &--content {
+    background-color: $white;
+    margin: 1% auto;
+    width: 80%;
+    border-radius: 5px;
+    padding: 20px;
+
+    &.modal-bg--turtle {
+      background-image: url("../images/payments/donate-modal.jpg");
+      background-repeat: no-repeat;
+      background-size: 50% 100%;
+
+      @media (max-width: 991.98px) {
+        background-image: none;
+      }
+    }
+    &.modal-bg--magazine {
+      background-image: url("../images/payments/magazine_img.png");
+      background-repeat: no-repeat;
+      background-size: 50% 100%;
+
+      @media (max-width: 991.98px) {
+        background-image: none;
+      }
+    }
+    &.modal-bg--nest {
+      background-image: url("../images/payments/adopt-a-nest.jpg");
+      background-repeat: no-repeat;
+      background-size: 50% 100%;
+
+      @media (max-width: 991.98px) {
+        background-image: none;
+      }
+    }
+  }
+}
+
+/* The Close Button */
+.close {
+  color: $base-black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: $primary-blue;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.turtle-empty-cart {
+  img {
+    width: 35%;
+    height: auto;
+    @media (max-width: 920px) {
+      width: 40%;
+    }
+    @media (max-width: 590px) {
+      width: 70%;
+    }
+  }
+  button {
+    width: 20%;
+    @media (max-width: 920px) {
+      width: 30%;
+    }
+    @media (max-width: 590px) {
+      width: 80%;
+    }
+  }
+}

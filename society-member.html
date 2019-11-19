@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Save the Sea Turtles - Elite Sea Turtle Society</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap_grid.css" type="text/css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="turtle-header turtle-header--society">
+      <!-- ========================
+        TOPNAV
+      ======================== -->
+      <nav class="turtle-nav" id="turtleNav" class="row">
+        <span class="turtle-logo--span">
+          <a class="turtle-logo" href="index.html"
+            ><img
+              class="turtle-logo--image"
+              src="images/horizontal_logo.svg"
+              alt="Save the Sea Turtles Logo"
+          /></a>
+        </span>
+
+        <div class="turtle-right--elements">
+          <ul class="row">
+            <li>
+              <a class="turtle-nav--link" href="about.html">About US</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="get-involved.html"
+                >Get Involved</a
+              >
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="store.html">Store</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="news.html">News</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0);"
+                class="turtle-nav--menu-toggle"
+                onclick="mobileToggle()"
+              >
+                <i class="material-icons">
+                  menu
+                </i>
+              </a>
+            </li>
+            <li>
+              <button
+                class="turtle-button turtle-button--primary margin-left--10"
+                type="button"
+                onClick="showDonateModal()"
+                id="donateModalBtn"
+              >
+                DONATE
+              </button>
+              <!-- DONATION MODAL -->
+              <div id="donateModal" class="turtle-modal turtle-modal--donation">
+                <!-- modal content -->
+                <div class="turtle-modal--content modal-bg--turtle">
+                  <span
+                    id="donateClose"
+                    class="close"
+                    onClick="hideDonateModal()"
+                    >&times;</span
+                  >
+                  <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+                    <div class="col-lg-6 col-md-12" style="padding:50px;">
+                      <p
+                        class="support-text turtle-text--bold turtle-text--uppercase text-color--base-gray"
+                      >
+                        Donate
+                      </p>
+                      <img
+                        src="images/payments/PayPal_Logo.png"
+                        alt="PayPal Logo"
+                        width="145px"
+                        height="auto"
+                        class="margin-top--20"
+                      />
+                      <p>
+                        Sign in to pay with PayPal!
+                      </p>
+                      <form class="margin-top--30" action="">
+                        <label class="turtle-label" for="emailaddress"
+                          >Email Address</label
+                        ><br />
+
+                        <input
+                          class="turtle-input margin-top--10 margin-bottom--20"
+                          type="text"
+                          id="emailaddress"
+                        />
+                        <label class="turtle-label" for="password"
+                          >Password</label
+                        ><br />
+
+                        <input
+                          class="turtle-input margin-top--10"
+                          type="password"
+                          id="password"
+                        />
+                        <input
+                          class="turtle-button col-12 turtle-button--secondary margin-top--30"
+                          type="submit"
+                          value="Log in to PayPal"
+                        />
+                      </form>
+                      <div class="text-align--center">
+                        <button
+                          class="turtle-button turtle-button--flat-small margin-top--20"
+                          onclick="location.href='#!';"
+                          type="button"
+                        >
+                          Forgot your password?
+                        </button>
+                        <button
+                          class="turtle-button col-12 turtle-button--primary-outline margin-top--40"
+                          onclick="location.href='#!';"
+                          type="button"
+                        >
+                          Pay with Debit or Credit Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END DONATION MODAL -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END TOPNAV -->
+
+      <!-- ========================
+          END MOBILE NAV
+        ======================== -->
+      <div id="turtle-nav--mobile" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="about.html">About Us</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="store.html">Store</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <!-- END MOBILE NAV -->
+
+      <div class="turtle-header--content margin-top--80">
+        <h1
+          class="turtle-header--content-title col-md-8 col-sm-12"
+          style="padding:0px;"
+        >
+          The Elite Sea Turtle Society
+        </h1>
+        <h2 class="turtle-header--content-subtitle margin-top--10">
+          The ultimate form of giving.
+        </h2>
+        <button
+          class="turtle-button turtle-button--header margin-top--40"
+          onclick="location.href='#!';"
+          type="button"
+        >
+          Join the Society
+        </button>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- MAIN -->
+    <main>
+      <div class="turtle-main-content" id="turtle-tabs">
+        <!-- Tab Row -->
+        <div class="row margin-top--30">
+          <nav class="turtle-tab__row">
+            <ul>
+              <li>
+                <a class="turtle-tab__link" href="society.html#turtle-tabs"
+                  >About the Society</a
+                >
+              </li>
+              <li>
+                <a class="turtle-tab__link turtle-tab__link-is-active" href="#!"
+                  >Why become a member</a
+                >
+              </li>
+              <li>
+                <a class="turtle-tab__link" href="society-news.html#turtle-tabs"
+                  >News</a
+                >
+              </li>
+              <li>
+                <a class="turtle-tab__link" href="society-join.html#turtle-tabs"
+                  >Join the Society</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Our Mission -->
+        <h3 class="margin-top--80 margin-bottom--10">
+          How you can make a difference
+        </h3>
+        <p style="padding:0;">
+          Your generous support will help us fight an uphill battle to solve the
+          problems at hand but will also support our future goals, to educate,
+          conserve, and protect today so our children and theirs can enjoy the
+          planets oceans and waterways and its habitats that we enjoy today. We
+          hope that you will help and be long remembered giving future
+          generations the opportunity to enjoy the wonders of our earth and
+          oceans.
+          <br /><br />
+          Would you like to leave a long-lasting legacy to protect sea turtles
+          and marine life? Would you like to conserve and protect the planet’s
+          oceans and waterways today so our children and their children can
+          enjoy them tomorrow? Education is the key to passing on the knowledge
+          needed for future generations to continue to protect our natural
+          resources.
+          <br /><br />
+          In order to give scholars, professors, and teachers the opportunity to
+          pass on their knowledge, your Estate Planning can support a student’s
+          education through the Elite Sea Turtle Society Scholarship Program.
+          You can make a real difference in a young person’s life by helping
+          provide the means for them to earn a graduate degree. These graduates
+          can then continue to carry the banner of marine education, protection,
+          public awareness, and research for the students of tomorrow.
+          <br /><br />
+          Our continued success in protecting marine life relies on the
+          foresight of people like yourself who plan ahead. It’s simple, and
+          something to take into consideration with your Estate Planning.
+          Examples are making the Foundation a beneficiary of a life insurance
+          policy or portion thereof. Other options include retirement plans,
+          brokerage accounts, and/or annual contributions with certificates of
+          deposit. Most of us have a will or trust, and you may want to consult
+          with your attorney, accountant, or financial executive to discuss the
+          potential tax benefits of contributing to the National Save The Sea
+          Turtle Foundation, and to guarantee that your wishes will be carried
+          out.
+          <br /><br />
+          With your planned gift to NSTSTF you will become a member of the Elite
+          Sea Turtle Society. Your gift will help us continue to support our
+          education, protection, and public awareness programs, our own ongoing
+          Hawksbill Sea Turtle Research Program, and help expand our efforts to
+          support the scientists of tomorrow. Thank you!
+          <br /><br />
+          If you would like to take this opportunity to join today your tax
+          deductible contribution of $5000.00 will ensure your membership now.
+        </p>
+        <button
+          class="turtle-button turtle-button--secondary turtle-button--secondary-small margin-top--40"
+          onclick="location.href='#!';"
+          download
+          type="button"
+        >
+          Join with PayPal
+        </button>
+      </div>
+
+      <div class="turtle-heading margin-top--100 margin-bottom--30">
+        <h2>
+          Supported Research
+        </h2>
+      </div>
+      <div class="turtle-main-content">
+        <div class="row">
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 margin-bottom--40 turtle-article"
+          >
+            <img
+              src="images/amy-humphries-yxFbkyNhF-c-unsplash.jpg"
+              alt="Turtle Article"
+              width="95%"
+              height="auto"
+            />
+            <p class="turtle-text--bold margin-top--20">
+              <a href="news-article.html"
+                >A Brief Exposure to Magnetic Distortions During Embryonic
+                Development May Compromise the...</a
+              >
+            </p>
+            <p class="support-text margin-top--10 text-color--base-gray">
+              September 23, 2019
+            </p>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 margin-bottom--40 turtle-article"
+          >
+            <img
+              src="images/A-Brief-Exposure-Fig2.jpg"
+              alt="Turtle Article"
+              width="95%"
+              height="auto"
+            />
+            <p class="turtle-text--bold margin-top--20">
+              <a href="news-article.html"
+                >The Pluses and Minuses of Using AMDRO to administer seaweed
+                impact…</a
+              >
+            </p>
+            <p class="support-text margin-top--10 text-color--base-gray">
+              August 8, 2019
+            </p>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6 col-sm-6 margin-bottom--40 turtle-article"
+          >
+            <img
+              src="images/A-head-on-view-of-a-juvenile-green-turtle.jpg"
+              alt="Turtle Article"
+              width="95%"
+              height="auto"
+            />
+            <p class="turtle-text--bold margin-top--20">
+              <a href="news-article.html"
+                >Studying Florida’s Living Dinosaurs; One Turtle at a…</a
+              >
+            </p>
+            <p class="support-text margin-top--10 text-color--base-gray">
+              December 18, 2019
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="turtle-heading margin-top--100 margin-bottom--30">
+        <h2>
+          Supported Education Programs
+        </h2>
+      </div>
+      <div class="turtle-main-content">
+        <h3 class="margin-top--80 margin-bottom--10">
+          Florida Atlantic University Undergraduate Scholarship Program
+        </h3>
+        <p style="padding:0;">
+          The National Save The Sea Turtle Foundation plans to donate sufficient
+          funds to Florida Atlantic University for 4 undergraduate scholarships
+          at $15,000 each during the 2018-2019 academic year. The scholarship
+          will provide financial assistance to Charles E. Schmidt College of
+          Science seniors enrolled at the Boca Raton Campus who demonstrate
+          academic excellence, financial need, and a commitment to become
+          scholars and ambassadors that represent the Marine Science program at
+          Florida Atlantic University. As such, they are expected to develop as
+          well-rounded, skilled, and committed individuals who are motivated to
+          engage the public through education, research and outreach activities
+          appropriate to both their specific interests in the field, as well as
+          those of importance in the field of marine biology.
+          <br /><br />
+          The ideal candidate is an undergraduate about to enter their senior
+          year with interest in any aspect of marine biology research at the
+          ecological, evolutionary, or behavioral level and educational
+          outreach. Preference will be given to applicants in good standing in
+          the biology department’s Honors Thesis Program who demonstrate
+          financial need, coupled with a commitment to community service,
+          academic excellence, and a desire to enhance their ability to engage
+          the public. These scholarships shall be awarded on the basis of need
+          and merit without regard to race, color, religion, age, sex, national
+          origin, or disability.
+        </p>
+
+        <hr class="margin-vertical--60" />
+
+        <h3 class="margin-top--80 margin-bottom--10">
+          2017 National Save-The-Sea-Turtle Foundation Graduate Scholarships at
+          Florida Atlantic University
+        </h3>
+        <p style="padding:0;">
+          The National Save The Sea Turtle Foundation has again funded generous
+          scholarships for graduate students in the Department of Biological
+          Sciences at Florida Atlantic University. An increase in the dollar
+          amount this year enabling the department to provide support to 8
+          talented, hard-working students who are making substantial progress
+          toward completing advanced (Masters, Doctoral) degrees. Their research
+          projects have in common that they deal with central topics in marine
+          biology: how animals are functionally designed, how they exploit and
+          perceive their environment, how they interact with one another, and
+          how they are affected by human-induced environmental change.
+          <br /><br />
+          It’s no accident that the organisms selected for these studies are
+          “charismatic megafauna” – large, magnificent creatures that have
+          persisted on earth for millions of years, play a dominant role in
+          marine ecosystems, and have captured the interest and attention of
+          humans throughout our history. They are unfortunately also organisms
+          whose numbers have been severely depleted, thanks to our increasingly
+          efficient ability to harvest them and to degrade the habitats they
+          require to replace their numbers. These are, specifically, the marine
+          turtles and the cartilaginous fishes (sharks, skates, rays).
+        </p>
+
+        <div class="row margin-top--60">
+          <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+            <img
+              src="images/anna-earl-J-Jb1niw1j0-unsplash.jpg"
+              alt="Volunteering"
+              width="100%"
+              height="auto"
+              class="text-align--center"
+            />
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+            <img
+              src="images/The-University-of-Central-Florida-attachment-crew.png"
+              alt="Volunteering"
+              width="100%"
+              height="auto"
+              class="text-align--center"
+            />
+          </div>
+
+          <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+            <img
+              src="images/espen-bierud-LBHKdpAFwUQ-unsplash.jpg"
+              alt="Volunteering"
+              width="100%"
+              height="auto"
+              class="text-align--center"
+            />
+          </div>
+        </div>
+
+        <hr class="margin-vertical--60" />
+
+        <h3 class="margin-top--80 margin-bottom--10">
+          National Save-the-Sea Turtle Foundation awards four $1000 Graduate
+          Scholarships to Florida Atlantic University
+        </h3>
+        <p style="padding:0;">
+          The Department of Biological Sciences has once again been the
+          recipient of five scholarships, totaling $4000, from the National
+          Save-the-Sea-Turtle Foundation of Fort Lauderdale, Florida. These
+          funds are used to support graduate research at the Master of Science
+          and Doctoral levels. While in the past the Foundation has provided
+          funding for projects involving marine turtles, this year the decision
+          was made to support broader topics of research dealing with the
+          conservation, management, or basic biology of marine fishes as well as
+          turtles. This topical expansion also better reflects the interests of
+          our department which in recent years, has expanded by hiring of
+          several new and outstanding faculty in the various subdisciplines of
+          marine biology. Their students can now apply and compete for these
+          important scholarships. Below, I summarize their projects.
+          <br /><br />
+          Sharks have very unique skin properties, compared to other animals. It
+          has been shown to contribute to shark swimming by acting as an
+          external tendon that transmits forces along the animal’s body. The
+          skin is covered in small teeth-like structures called dermal
+          denticles. Denticle shape and size varies among species and along the
+          length of the body. Previous studies on shark skin mechanics have been
+          only been done on one species, so Shelby is interested in determining
+          the mechanical properties of shark skin among several species,
+          selected because of differences in how they swim. She will also
+          examine regional differences in skin properties at twelve different
+          locations on the shark’s body. Skin from the blacktip, the scalloped
+          hammerhead, and the shortfin mako sharks will be stretched using a
+          materials testing system until skin failure is reached. That’s the
+          point at which the skin breaks. This system is similar to what an
+          engineer use to test the properties of concrete or steel. For this
+          study, she is calculating ultimate skin strength (force required to
+          break the skin), stiffness (the skin’s ability to resist tension), as
+          well as the size and number of denticles per mm2 for each sample.
+          Denticle information will be correlated with ultimate strength and
+          stiffness.
+          <br /><br />
+          Mechanical testing may be of great interest to engineers, but why
+          would this be important biologically? These findings will detail the
+          mechanical properties and denticle shape and size from several
+          species, and may provide inspiration for the development of new types
+          of flexible propulsion systems and biologically inspired materials for
+          construction.
+        </p>
+
+        <hr class="margin-vertical--60" />
+
+        <h3 class="margin-top--80 margin-bottom--10">
+          Inwater Research Group Provides Unique Sea Turtle Education Program
+        </h3>
+        <p style="padding:0;">
+          In 2016, IRG was able to make amazing strides in the field of
+          conservation education. We wrapped up our Treasured Turtles: Treasure
+          Coast Sea Turtle Outreach Program for At-risk Youth. This program
+          allowed us to find the most severely undeserved schools in our
+          surrounding school districts and offer them free in-class programs.
+          Students were able to get hands-on with real artifacts and step into
+          the role of biologists as they assessed and collected data from their
+          very own model turtle. We visited four school districts, taught myriad
+          of grade levels, and reached nearly 1,500 students. In addition to
+          this grant program, we continued to visit schools by request in
+          surrounding school districts. Engaging in-class presentations and
+          demonstrations were delivered to over 500 students. Along with our
+          Treasured Turtles grants program, we were able to reach over 2,000
+          students from 55 classrooms giving over 78 presentations.
+        </p>
+        <div class="row margin-bottom--60">
+          <div class="col-lg-6 col-12 margin-top--20" style="padding:0;">
+            <p>
+              Our Traveling Turtles: Traveling Trunk Program is a hands-on,
+              experiential way for students to feel what it’s like to practice
+              real science. Our traveling trunks are available to local
+              teachers, who may run its 4-lesson module for up to three weeks in
+              their classrooms. Kits include artifacts, biological tools, model
+              turtles, interactive videos, and a ready-made lesson binder.
+              Teachers and district coordinators laud its inquiry-based nature
+              and its free status. Students are engaged with the STEM (science,
+              technology, engineering, and math) content and enjoy the feeling
+              of being a marine biologist as they run through the same data
+              collection marine biologists do on a daily basis.
+              <br /><br />
+              In 2015, the program was in such high demand that our two trunks
+              could not accommodate all requests. Because of this, we launched
+              two more trunks, totaling four to reach as many students locally
+              as we could. Within two months, the program booked once again to
+              capacity and this year we are slated to reach over 10,000 students
+              in Martin and St.Lucie County School Districts.
+            </p>
+          </div>
+          <div
+            class="col-lg-6 col-12 padding-vertical--30 padding-horizontal--30"
+          >
+            <img
+              src="images/Broward-County-Sea-Turtle-conservation-program.jpg"
+              alt="Volunteering"
+              width="80%"
+              height="auto"
+              class="text-align--center"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="turtle-donate-bar">
+        <h1 class="text-color--white col-md-5 col-sm-12">
+          To move forward, you must give back.
+        </h1>
+        <p class="text-color--white">
+          Oprah Winfrey
+        </p>
+        <button
+          class="turtle-button turtle-button--header margin-top--40"
+          onclick="location.href='get-involved.html';"
+          type="button"
+        >
+          Get Involved
+        </button>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="turtle-footer row bg-dark">
+      <div class="col-md-4 col-sm-12 turtle-footer--social">
+        <a href="index.html">
+          <img
+            src="images/footer-logo.svg"
+            alt="light icon"
+            width="100%"
+            height="auto"
+          />
+        </a>
+        <div class="row turtle-footer--social-icons margin-top--30">
+          <a href="404.html" target="_blank"
+            ><i
+              class="fa fa-instagram text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+          <a href="https://www.facebook.com/savetheseaturtl/" target="_blank"
+            ><i
+              class="fa fa-facebook-square text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+          <a href="https://twitter.com/savetheseaturtl" target="_blank"
+            ><i
+              class="fa fa-twitter-square text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="col-md-auto"></div>
+
+      <div class="col-md-3 col-m-12">
+        <div class="margin-bottom--50">
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="news.html">
+                News
+              </a>
+            </h6>
+            <li>
+              <a href="new-article.html">
+                Oceanic Research
+              </a>
+            </li>
+            <li>
+              <a href="news.html">
+                Latest News
+              </a>
+            </li>
+            <li>
+              <a href="news-article.html">
+                Florida Hawksbill Project
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="get-involved.html">
+                Get Involved
+              </a>
+            </h6>
+            <li>
+              <a href="adopt-a-nest.html">
+                Adopt a Nest
+              </a>
+            </li>
+            <li>
+              <a href="donate-a-boat.html">
+                Donate a Boat
+              </a>
+            </li>
+            <li>
+              <a href="society.html">
+                Elite Sea Turtle Society
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-m-12">
+        <div class="margin-bottom--50">
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="get-involved.html">
+                Get In Touch
+              </a>
+            </h6>
+            <li class="text-color--white">
+              4419 West Tradewinds Avenue <br />
+              Ft. Lauderdale, Florida <br />
+              33308
+            </li>
+            <li class="text-color--white">
+              (954) 351-9333
+            </li>
+          </ul>
+        </div>
+
+        <span class="support-text text-color--white">
+          Non-Profit Organization State of Florida Registration Number CH-2841.
+          Internal Revenue Code 501 (c) (3) Copyright ©
+        </span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

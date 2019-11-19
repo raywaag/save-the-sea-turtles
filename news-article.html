@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Save the Sea Turtles - News Article</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap_grid.css" type="text/css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="turtle-header">
+      <!-- ========================
+        TOPNAV
+      ======================== -->
+      <nav class="turtle-nav" id="turtleNav" class="row">
+          <span class="turtle-logo--span">
+            <a class="turtle-logo" href="index.html"
+              ><img
+                class="turtle-logo--image"
+                src="images/horizontal_logo.svg"
+                alt="Save the Sea Turtles Logo"
+            /></a>
+          </span>
+  
+          <div class="turtle-right--elements">
+            <ul class="row">
+              <li>
+                <a class="turtle-nav--link" href="about.html">About US</a>
+              </li>
+              <li>
+                <a class="turtle-nav--link" href="get-involved.html"
+                  >Get Involved</a
+                >
+              </li>
+              <li>
+                <a class="turtle-nav--link" href="store.html">Store</a>
+              </li>
+              <li>
+                <a class="turtle-nav--link" href="news.html">News</a>
+              </li>
+              <li>
+                <a class="turtle-nav--link" href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="turtle-nav--menu-toggle"
+                  onclick="mobileToggle()"
+                >
+                  <i class="material-icons">
+                    menu
+                  </i>
+                </a>
+              </li>
+              <li>
+                <button
+                  class="turtle-button turtle-button--primary margin-left--10"
+                  type="button"
+                  onClick="showDonateModal()"
+                  id="donateModalBtn"
+                >
+                  DONATE
+                </button>
+                <!-- DONATION MODAL -->
+                <div id="donateModal" class="turtle-modal turtle-modal--donation">
+                  <!-- modal content -->
+                  <div class="turtle-modal--content modal-bg--turtle">
+                    <span
+                      id="donateClose"
+                      class="close"
+                      onClick="hideDonateModal()"
+                      >&times;</span
+                    >
+                    <div class="row">
+                      <div class="col-lg-6 d-none d-lg-block"></div>
+                      <div class="col-lg-6 col-md-12" style="padding:50px;">
+                        <p
+                          class="support-text turtle-text--bold turtle-text--uppercase text-color--base-gray"
+                        >
+                          Donate
+                        </p>
+                        <img
+                          src="images/payments/PayPal_Logo.png"
+                          alt="PayPal Logo"
+                          width="145px"
+                          height="auto"
+                          class="margin-top--20"
+                        />
+                        <p>
+                          Sign in to pay with PayPal!
+                        </p>
+                        <form class="margin-top--30" action="">
+                          <label class="turtle-label" for="emailaddress"
+                            >Email Address</label
+                          ><br />
+  
+                          <input
+                            class="turtle-input margin-top--10 margin-bottom--20"
+                            type="text"
+                            id="emailaddress"
+                          />
+                          <label class="turtle-label" for="password"
+                            >Password</label
+                          ><br />
+  
+                          <input
+                            class="turtle-input margin-top--10"
+                            type="password"
+                            id="password"
+                          />
+                          <input
+                            class="turtle-button col-12 turtle-button--secondary margin-top--30"
+                            type="submit"
+                            value="Log in to PayPal"
+                          />
+                        </form>
+                        <div class="text-align--center">
+                          <button
+                            class="turtle-button turtle-button--flat-small margin-top--20"
+                            onclick="location.href='#!';"
+                            type="button"
+                          >
+                            Forgot your password?
+                          </button>
+                          <button
+                            class="turtle-button col-12 turtle-button--primary-outline margin-top--40"
+                            onclick="location.href='#!';"
+                            type="button"
+                          >
+                            Pay with Debit or Credit Card
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END DONATION MODAL -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- END TOPNAV -->
+  
+        <!-- ========================
+            END MOBILE NAV
+          ======================== -->
+        <div id="turtle-nav--mobile" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="overlay-content">
+            <a href="about.html">About Us</a>
+            <a href="get-involved.html">Get Involved</a>
+             <a href="store.html">Store</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <!-- END MOBILE NAV -->
+
+      <div class="turtle-header--content margin-top--80">
+        <!-- Our Mission -->
+        <div class="row margin-top--100 align-items-center">
+          <div class="col-lg-6 col-md-6 d-none d-md-block">
+            <img
+              src="images/news-article.png"
+              alt="Beach Clean Up"
+              class="turtle-header--content-image turtle-header--content-image-article"
+            />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <p
+              class="support-text turtle-text--uppercase text-color--base-gray"
+            >
+             News
+            </p>
+            <h2 style="line-height:2.4rem;">
+                Animal Behavior and Visual Perception:
+                How Does Sea Turtle Vision Differ from Ours?
+            </h2>
+            <p class="margin-top--20">
+                Mike Salmon, Ph.D.
+                Research Professor, Department of Biological Sciences
+                Florida Atlantic University
+            </p>
+            <p class="margin-top--20">
+                October 5, 2018
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- MAIN -->
+    <div class="turtle-main-content">
+      <p style="padding:0;">
+      I entered graduate school in zoology without really knowing what area in that enormous field was of greatest interest. 
+      I did know that spending time around marine habitats, be they marshes, bays or the open ocean, was where I was happiest,
+      especially when observing the amazing activities of their inhabitants. All that uncertainty disappeared two weeks after 
+      I enrolled in an Animal Behavior class taught by the professor who ultimately guided my studies toward an advanced degree.
+      His class was an introduction to the entire field and covered a wide range of topics in two general areas: (i) what we 
+      knew (at the time) about what animals did and why they did it, and (ii) how to design proper experiments to find out more. I was soon totally “hooked”!
+      </p>
+
+      <div class="row margin-top--20">
+
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <img
+              src="images/chris-rogerson-BkbOnx_D598-unsplash.jpg"
+              alt="Turtle Article"
+              width="100%"
+              height="auto"
+              class="padding-bottom--20"
+            />
+        </div>
+
+        <div class="col-lg-8 col-md-7 col-sm-12 margin-bottom--20">
+          <p>
+          Those aspects sometimes included information that we can’t detect, such as the earth’s magnetic field or high-frequency 
+          “ultrasound”. Collectively, those discoveries led to the realization that how we view the world is unique to us, but not 
+          a “better” version than one possessed by another species. The common denominator is that each complement of sense organs 
+          provides a perceptual “window” into the external world. That window is modified through evolution to detect what each 
+          species needs to know. A proper understanding of that perceptual world requires knowing not only where each species lives 
+          (on land or under water). Those differences were caused by 
+          the unique properties of their sense organs (eyes, ears, touch, smell, etc.) used to inform them about their environment. 
+          Those aspects sometimes included information that we can’t detect. Collectively, those discoveries led to the realization that how we view the world is unique to us, but not a 
+          “better” version than one possessed by another species. That window is modified through evolution to detect what each 
+          species needs to know. A proper understanding of that perceptual world requires knowing not only where each species lives 
+          (on land or under water), but also what it needs to know to survive in a hostile world.
+          </p>
+        </div>
+        </div>
+
+          <p style="padding:0;">
+          I entered graduate school in zoology without really knowing what area in that enormous field was of greatest interest. 
+          I did know that spending time around marine habitats, be they marshes, bays or the open ocean, was where I was happiest,
+          especially when observing the amazing activities of their inhabitants. All that uncertainty disappeared two weeks after 
+          I enrolled in an Animal Behavior class taught by the professor who ultimately guided my studies toward an advanced degree.
+          His class was an introduction to the entire field and covered a wide range of topics in two general areas: (i) what we 
+          knew (at the time) about what animals did and why they did it, and (ii) how to design proper experiments to find out more. I was soon totally “hooked”!
+          <br/><br/>
+          Collectively, those discoveries led to the realization that how we view the world is unique to us, but not a “better” 
+          version than one possessed by another species. The common denominator is that each complement of sense organs provides a 
+          perceptual “window” into the external world. That window is modified through evolution to detect what each species needs to
+          know. A proper understanding of that perceptual world requires knowing not only where each species lives (on land or under 
+          water), but also what it needs to know to survive in a hostile world. (bivalves, crabs, conches) in coastal waters at depths that average 
+          30 m while leatherbacks feed on jellyfishes and other “gelatinous” creatures in open water, sometimes near the surface but often 
+          at depths that can exceed hundreds of meters. Since all marine turtles must spend some time near the surface (to breathe), one 
+          might expect that they should detect much of the broad spectrum of light wavelengths present there. But to the extent that they 
+          spend even more time in deeper water they need to be especially sensitive to the light wavelengths present there since those best 
+          reveal the location of food, shelter, mates, and sources of danger such as predators. Is that what they do?
+
+          </p>
+
+        <div class="row margin-top--20">
+        <div class="col-lg-8 col-md-7 col-sm-12 margin-bottom--20" style="padding:0;">
+          <p>
+          On the other hand, there is a relatively simple and easily understood relationship between the concentration of 
+          these analyzers on the retinal surface and the visual ecology of animals living in different places. Animals found 
+          in open areas with a clear view of the horizon are most interested in visual events that take place on that horizon 
+          (for example, the approach of a predator). For that reason, they concentrate their retinal analyzers in a narrow, 
+          horizontal “visual streak” that parallels that location (Figure 5). On the other hand, there is a 
+          relatively simple and easily understood relationship between the concentration of 
+          these analyzers on the retinal surface and the visual ecology of animals living in different places. 
+          Visual streaks are less prominent among animals 
+          that must maneuver through or around obstacles, such as trees in a forest or reefs under water. On the other hand, 
+          predators that detect discrete targets often concentrate their retinal analyzers in circular spots called “areas”. 
+          These areas are appropriately placed in the retina to register the location of those targets in space.For that reason, 
+          they concentrate their retinal analyzers in a narrow,  horizontal “visual streak” that parallels that location (Figure 5).
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12">
+          <img
+            src="images/Jake-Lasala-2.jpg"
+            alt="Turtle Article"
+            width="100%"
+            height="auto"
+            class="padding-bottom--20"
+          />
+        </div>
+        </div>
+
+          <p style="padding:0;">
+          One of our students (2) took on the very laborious task of identifying the concentration of those retinal analyzers 
+          in hatchling green turtles, loggerheads and leatherbacks. (These were all turtles that had recently died inside the 
+          nest so none were sacrificed.) The results were quite interesting! Green turtles and loggerheads had visual streaks 
+          but those streaks were especially narrow in green turtles (Figure 6) that feed in open seagrass meadows (Figure 5). 
+          The retinas of leatherback hatchlings contained both a visual streak and an area, with the latter located in the 
+          upper half of the retina toward the rear of its concavity. That area would focus on targets located in the opposite 
+          direction, that is, ahead and below the turtle. Leatherbacks sometimes hunt for jellyfish while swimming near the 
+          surface. When they see one beneath and ahead of them, they dive down to consume it (Figure 7). That’s why our student 
+          called the leatherback area a “jellyfish detector”.
+          </p>
+
+          <h3 class="margin-top--40 margin-bottom--20">
+            Do Sea Turtle have Color Vision?
+          </h3>
+          <p style="padding:0;">
+              Color vision is characteristic of many, but not all, day-active animals. It plays an important role in recognizing 
+              mates, in finding suitable food, and in detecting enemies. Because color vision requires a lot of additional neural 
+              machinery, it doesn’t always evolve because there is another, simpler presented with a pair of colored targets, one of 
+              which had been previously rewarded. That took only a few days. Finally, and in the crucial test, each turtle had to 
+              choose the correct target from a pair when each target’s brightness varied from one trial to the next. All the turtles 
+              passed that test almost immediately, showing conclusively that targets were distinguished by their color. Bravo! Sea 
+              turtles have color vision!
+          </p>
+
+          <h6 class="margin-top--40 margin-bottom--20">
+            Theses
+          </h6>
+          <p class="margin-bottom--80" style="padding:0;">
+              Judith Gocke (2011) Visual spectral sensitivity of loggerhead and leatherback hatchlings: a comparative study.
+              <br/><br/>
+              Lisa Oliver (2010) Retinal anatomy of hatchling sea turtles: anatomical specializations and behavioral correlates.
+              <br/><br/>
+              Morgan Young (2011) Visual wavelength discrimination by the loggerhead sea turtle.
+          </p>
+    </div>
+    </div>
+    <div class="turtle-donate-bar">
+        <h1 class="text-color--white col-md-5 col-sm-12">
+          To move forward, you must give back.
+        </h1>
+        <p class="text-color--white">
+          Oprah Winfrey
+        </p>
+        <button
+          class="turtle-button turtle-button--header margin-top--40"
+          onclick="location.href='get-involved.html';"
+          type="button"
+        >
+          Get Involved
+        </button>
+      </div>
+  </main>
+
+    <!-- FOOTER -->
+    <footer class="turtle-footer row bg-dark">
+        <div class="col-md-4 col-sm-12 turtle-footer--social">
+          <a href="index.html">
+            <img
+              src="images/footer-logo.svg"
+              alt="light icon"
+              width="100%"
+              height="auto"
+            />
+          </a>
+          <div class="row turtle-footer--social-icons margin-top--30">
+            <a href="404.html" target="_blank"
+              ><i
+                class="fa fa-instagram text-color--white padding-vertical--10 padding-horizontal--10"
+                style="font-size: 2.2rem;"
+              ></i
+            ></a>
+            <a href="https://www.facebook.com/savetheseaturtl/" target="_blank"
+              ><i
+                class="fa fa-facebook-square text-color--white padding-vertical--10 padding-horizontal--10"
+                style="font-size: 2.2rem;"
+              ></i
+            ></a>
+            <a href="https://twitter.com/savetheseaturtl" target="_blank"
+              ><i
+                class="fa fa-twitter-square text-color--white padding-vertical--10 padding-horizontal--10"
+                style="font-size: 2.2rem;"
+              ></i
+            ></a>
+          </div>
+        </div>
+  
+        <div class="col-md-auto"></div>
+  
+        <div class="col-md-3 col-m-12">
+          <div class="margin-bottom--50">
+            <ul>
+              <h6 class="margin-bottom--10">
+                <a href="news.html">
+                  News
+                </a>
+              </h6>
+              <li>
+                <a href="new-article.html">
+                  Oceanic Research
+                </a>
+              </li>
+              <li>
+                <a href="news.html">
+                  Latest News
+                </a>
+              </li>
+              <li>
+                <a href="news-article.html">
+                  Florida Hawksbill Project
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div>
+            <ul>
+              <h6 class="margin-bottom--10">
+                <a href="get-involved.html">
+                  Get Involved
+                </a>
+              </h6>
+              <li>
+                <a href="adopt-a-nest.html">
+                  Adopt a Nest
+                </a>
+              </li>
+              <li>
+                <a href="donate-a-boat.html">
+                  Donate a Boat
+                </a>
+              </li>
+              <li>
+                <a href="society.html">
+                  Elite Sea Turtle Society
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-md-4 col-m-12">
+          <div class="margin-bottom--50">
+            <ul>
+              <h6 class="margin-bottom--10">
+                <a href="get-involved.html">
+                  Get In Touch
+                </a>
+              </h6>
+              <li class="text-color--white">
+                4419 West Tradewinds Avenue <br />
+                Ft. Lauderdale, Florida <br />
+                33308
+              </li>
+              <li class="text-color--white">
+                (954) 351-9333
+              </li>
+            </ul>
+          </div>
+  
+          <span class="support-text text-color--white">
+            Non-Profit Organization State of Florida Registration Number CH-2841.
+            Internal Revenue Code 501 (c) (3) Copyright ©
+          </span>
+        </div>
+      </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

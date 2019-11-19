@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Save the Sea Turtles - Donate a Boat</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap_grid.css" type="text/css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="turtle-header">
+      <!-- ========================
+        TOPNAV
+      ======================== -->
+      <nav class="turtle-nav" id="turtleNav" class="row">
+        <span class="turtle-logo--span">
+          <a class="turtle-logo" href="index.html"
+            ><img
+              class="turtle-logo--image"
+              src="images/horizontal_logo.svg"
+              alt="Save the Sea Turtles Logo"
+          /></a>
+        </span>
+
+        <div class="turtle-right--elements">
+          <ul class="row">
+            <li>
+              <a class="turtle-nav--link" href="about.html">About US</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="get-involved.html"
+                >Get Involved</a
+              >
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="store.html">Store</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="news.html">News</a>
+            </li>
+            <li>
+              <a class="turtle-nav--link" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0);"
+                class="turtle-nav--menu-toggle"
+                onclick="mobileToggle()"
+              >
+                <i class="material-icons">
+                  menu
+                </i>
+              </a>
+            </li>
+            <li>
+              <button
+                class="turtle-button turtle-button--primary margin-left--10"
+                type="button"
+                onClick="showDonateModal()"
+                id="donateModalBtn"
+              >
+                DONATE
+              </button>
+              <!-- DONATION MODAL -->
+              <div id="donateModal" class="turtle-modal turtle-modal--donation">
+                <!-- modal content -->
+                <div class="turtle-modal--content modal-bg--turtle">
+                  <span
+                    id="donateClose"
+                    class="close"
+                    onClick="hideDonateModal()"
+                    >&times;</span
+                  >
+                  <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+                    <div class="col-lg-6 col-md-12" style="padding:50px;">
+                      <p
+                        class="support-text turtle-text--bold turtle-text--uppercase text-color--base-gray"
+                      >
+                        Donate
+                      </p>
+                      <img
+                        src="images/payments/PayPal_Logo.png"
+                        alt="PayPal Logo"
+                        width="145px"
+                        height="auto"
+                        class="margin-top--20"
+                      />
+                      <p>
+                        Sign in to pay with PayPal!
+                      </p>
+                      <form class="margin-top--30" action="">
+                        <label class="turtle-label" for="emailaddress"
+                          >Email Address</label
+                        ><br />
+
+                        <input
+                          class="turtle-input margin-top--10 margin-bottom--20"
+                          type="text"
+                          id="emailaddress"
+                        />
+                        <label class="turtle-label" for="password"
+                          >Password</label
+                        ><br />
+
+                        <input
+                          class="turtle-input margin-top--10"
+                          type="password"
+                          id="password"
+                        />
+                        <input
+                          class="turtle-button col-12 turtle-button--secondary margin-top--30"
+                          type="submit"
+                          value="Log in to PayPal"
+                        />
+                      </form>
+                      <div class="text-align--center">
+                        <button
+                          class="turtle-button turtle-button--flat-small margin-top--20"
+                          onclick="location.href='#!';"
+                          type="button"
+                        >
+                          Forgot your password?
+                        </button>
+                        <button
+                          class="turtle-button col-12 turtle-button--primary-outline margin-top--40"
+                          onclick="location.href='#!';"
+                          type="button"
+                        >
+                          Pay with Debit or Credit Card
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END DONATION MODAL -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END TOPNAV -->
+
+      <!-- ========================
+            END MOBILE NAV
+          ======================== -->
+      <div id="turtle-nav--mobile" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="about.html">About Us</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="store.html">Store</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <!-- END MOBILE NAV -->
+
+      <div class="turtle-header--content margin-top--80">
+        <div class="row margin-top--100 align-items-center">
+          <div class="col-lg-5 col-sm-12">
+            <p
+              class="support-text turtle-text--uppercase text-color--base-gray"
+            >
+              Boat Donation
+            </p>
+            <h2 class="turtle-header--content-secondary-title">
+              Donate a Boat
+            </h2>
+            <p class="margin-top--20">
+              Read below about guidelines, boat application and the benefit of
+              donating your no longer beloved boat.
+              <br /><br />
+              If you have a yacht donation, please fill out the Yacht Evaluation
+              form at the bottom of this page.
+            </p>
+          </div>
+          <div class="col-lg-1  d-none d-lg-block"></div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img
+              src="images/headers/boatdonate_header.png"
+              alt="mail illustration"
+              width="100%"
+              height="auto"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- MAIN -->
+    <main>
+      <div class="turtle-heading margin-top--100 margin-bottom--30">
+        <h2>
+          Why Donate a Boat
+        </h2>
+      </div>
+
+      <div class="turtle-main-content">
+        <p class="col-lg-10 col-md-12 col-sm-12" style="padding:0;">
+          THE NATIONAL SAVE THE SEA TURTLE FOUNDATION, INC. (NSTSTF) was
+          established in 1987 for the protection of our fragile environment,
+          promotion of research and scientific investigation and to contribute
+          to environmental education, protection and public awareness in our
+          communities.
+          <br /><br />
+          NATIONAL SAVE THE SEA TURTLE FOUNDATION is a section 501 (c) (3) tax
+          exempt charity as defined by the U.S. Internal Revenue Service.
+          <br /><br />
+          Since its inception in 1987 the National Save The Sea Turtle
+          Foundation has accepted donations of vessels to support our efforts to
+          protect the marine environment and save sea turtles from extinction.
+          <br /><br />
+          Yacht donations and charitable cash donations have paved the way to
+          the Foundation’s 26 years of success.
+        </p>
+        <button
+          class="turtle-button turtle-button--secondary turtle-button--secondary-small margin-top--40"
+          onclick="location.href='#!';"
+          download
+          type="button"
+        >
+          <i class="material-icons" style="vertical-align:bottom;">
+            get_app
+          </i>
+          Download the Application
+        </button>
+      </div>
+
+      <div class="turtle-heading margin-top--100">
+        <h2>
+          Benefits of Boat Donation
+        </h2>
+      </div>
+
+      <div class="bg-dark">
+        <!-- ICON GRID -->
+        <div class="turtle-icon-row">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <img
+                src="images/icon-support.png"
+                alt="Support"
+                width="30%"
+                height="auto"
+                class="text-align--center"
+              />
+              <h4 class="margin-top--20 text-color--white">
+                Support
+              </h4>
+              <p class="margin-top--10 text-color--white">
+                Become a part of a national effort to protect our marine
+                environment and save the sea turtles.
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <img
+                src="images/icon-sellers-relief.png"
+                alt="Tax Benefits Icon"
+                width="30%"
+                height="auto"
+                class="text-align--center"
+              />
+              <h4 class="margin-top--20 text-color--white">
+                Seller's Relief
+              </h4>
+              <p class="margin-top--10 text-color--white">
+                End all expenses and the aggravation involved in the sale of
+                your vessel by donating your boat.
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <img
+                src="images/icon-no-card.png"
+                alt="Credit Card Icon"
+                width="30%"
+                height="auto"
+                class="text-align--center"
+              />
+              <h4 class="margin-top--20 text-color--white">
+                Stop Paying
+              </h4>
+              <p class="margin-top--10 text-color--white">
+                Dockage fees, insurance rates, fuel costs and maintenance - get
+                rid of it.
+              </p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+              <img
+                src="images/icon-tax-benefits.png"
+                alt="Tax Benefits Icon"
+                width="30%"
+                height="auto"
+                class="text-align--center"
+              />
+              <h4 class="margin-top--20 text-color--white">
+                Tax Benefits
+              </h4>
+              <p class="margin-top--10 text-color--white">
+                Receive tax benefits without paying a sales commission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUIDELINES -->
+      <div class="turtle-heading margin-top--100">
+        <h2>
+          Guidelines
+        </h2>
+      </div>
+      <div class="turtle-main-content">
+        <div class="row align-items-center margin-bottom--30">
+          <div class="col-lg-1 col-md-2 col-sm-2 col-3">
+            <img
+              src="images/num_1.png"
+              alt="Number One"
+              width="90%"
+              height="auto"
+            />
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-8">
+            <p>
+              It is the donor’s responsibility to obtain an appraisal from a
+              “qualified appraiser”.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center margin-bottom--30">
+          <div class="col-lg-1 col-md-2 col-sm-2 col-3">
+            <img
+              src="images/num_2.png"
+              alt="Number Two"
+              width="90%"
+              height="auto"
+            />
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-8">
+            <p>
+              It is recommended that the donor engage a professional tax advisor
+              before making any commitment regarding donation of property to a
+              non-profit organization.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center margin-bottom--30">
+          <div class="col-lg-1 col-md-2 col-sm-2 col-3">
+            <img
+              src="images/num_3.png"
+              alt="Number Three"
+              width="90%"
+              height="auto"
+            />
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-8">
+            <p>
+              The National Save The Sea Turtle Foundation will provide
+              documentation to allow the donation to qualify for the appraised
+              value which will include Form 1098-C, Form 8283 and a
+              Contemporaneous Letter of Acceptance.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center margin-bottom--30">
+          <div class="col-lg-1 col-md-2 col-sm-2 col-3">
+            <img
+              src="images/num_4.png"
+              alt="Number Four"
+              width="90%"
+              height="auto"
+            />
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-8">
+            <p>
+              IRS Publication 4303 is a very informative booklet available
+              online at www.irs.gov The web site also has links to all of the
+              forms required by the IRS to properly document any donations for a
+              tax deduction.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-center margin-bottom--30">
+          <div class="col-lg-1 col-md-2 col-sm-2 col-3">
+            <img
+              src="images/num_5.png"
+              alt="Number Five"
+              width="90%"
+              height="auto"
+            />
+          </div>
+          <div class="col-lg-10 col-md-10 col-sm-8 col-8">
+            <p>
+              We will help with any questions you or your tax professional may
+              have regarding your charitable donation to the National Save The
+              Sea Turtle Foundation.
+            </p>
+          </div>
+        </div>
+        <button
+          class="turtle-button turtle-button--secondary turtle-button--secondary-small margin-top--40"
+          onclick="location.href='#!';"
+          download
+          type="button"
+        >
+          <i class="material-icons" style="vertical-align:bottom;">
+            get_app
+          </i>
+          Download the Application
+        </button>
+      </div>
+
+      <!-- YACHT EVAL FORM -->
+      <div class="turtle-heading margin-top--100">
+        <h2>
+          Yacht Evaluation
+        </h2>
+      </div>
+      <form class="turtle-main-content" action="">
+        <p class="margin-bottom--30">
+          For a Yacht Evaluation, please call <strong>954-351-9333</strong> or
+          fill out the boat details form below.
+        </p>
+        <div class="row">
+          <!-- year built -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-6 padding-vertical--20">
+            <label class="turtle-label" for="yearBuilt">Year Built</label><br />
+            <input
+              class="turtle-input margin-top--10"
+              type="text"
+              id="yearBuilt"
+            />
+          </div>
+          <!-- make -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-6 padding-vertical--20">
+            <label class="turtle-label" for="make">Make</label><br />
+            <input class="turtle-input margin-top--10" type="text" id="make" />
+          </div>
+          <!-- model -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-6 padding-vertical--20">
+            <label class="turtle-label" for="model">Model</label><br />
+            <input class="turtle-input margin-top--10" type="text" id="model" />
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- first name -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-6 padding-vertical--20">
+            <label class="turtle-label" for="firstName">First Name</label><br />
+            <input
+              class="turtle-input margin-top--10"
+              type="text"
+              id="firstName"
+            />
+          </div>
+          <!-- last name -->
+          <div class="col-lg-4 col-md-4 col-sm-6 col-6 padding-vertical--20">
+            <label class="turtle-label" for="lastName">Last Name</label><br />
+            <input
+              class="turtle-input margin-top--10"
+              type="text"
+              id="lastName"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- subject -->
+          <div class="col-lg-7 col-md-9 col-sm-12 padding-vertical--20">
+            <label class="turtle-label" for="phoneNumber">Phone Number</label
+            ><br />
+            <input
+              class="turtle-input margin-top--10"
+              type="text"
+              id="phoneNumber"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <!-- email address -->
+          <div class="col-lg-7 col-md-9 col-sm-12 padding-vertical--20">
+            <label class="turtle-label" for="email">Email Address</label><br />
+            <input class="turtle-input margin-top--10" type="text" id="email" />
+          </div>
+        </div>
+        <input
+          class="turtle-button col-lg-2 col-md-5 col-sm-12 turtle-button--secondary margin-left--10 margin-top--20"
+          type="submit"
+          value="Send"
+        />
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="turtle-footer row bg-dark">
+      <div class="col-md-4 col-sm-12 turtle-footer--social">
+        <a href="index.html">
+          <img
+            src="images/footer-logo.svg"
+            alt="light icon"
+            width="100%"
+            height="auto"
+          />
+        </a>
+        <div class="row turtle-footer--social-icons margin-top--30">
+          <a href="404.html" target="_blank"
+            ><i
+              class="fa fa-instagram text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+          <a href="https://www.facebook.com/savetheseaturtl/" target="_blank"
+            ><i
+              class="fa fa-facebook-square text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+          <a href="https://twitter.com/savetheseaturtl" target="_blank"
+            ><i
+              class="fa fa-twitter-square text-color--white padding-vertical--10 padding-horizontal--10"
+              style="font-size: 2.2rem;"
+            ></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="col-md-auto"></div>
+
+      <div class="col-md-3 col-m-12">
+        <div class="margin-bottom--50">
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="news.html">
+                News
+              </a>
+            </h6>
+            <li>
+              <a href="new-article.html">
+                Oceanic Research
+              </a>
+            </li>
+            <li>
+              <a href="news.html">
+                Latest News
+              </a>
+            </li>
+            <li>
+              <a href="news-article.html">
+                Florida Hawksbill Project
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="get-involved.html">
+                Get Involved
+              </a>
+            </h6>
+            <li>
+              <a href="adopt-a-nest.html">
+                Adopt a Nest
+              </a>
+            </li>
+            <li>
+              <a href="donate-a-boat.html">
+                Donate a Boat
+              </a>
+            </li>
+            <li>
+              <a href="society.html">
+                Elite Sea Turtle Society
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-m-12">
+        <div class="margin-bottom--50">
+          <ul>
+            <h6 class="margin-bottom--10">
+              <a href="get-involved.html">
+                Get In Touch
+              </a>
+            </h6>
+            <li class="text-color--white">
+              4419 West Tradewinds Avenue <br />
+              Ft. Lauderdale, Florida <br />
+              33308
+            </li>
+            <li class="text-color--white">
+              (954) 351-9333
+            </li>
+          </ul>
+        </div>
+
+        <span class="support-text text-color--white">
+          Non-Profit Organization State of Florida Registration Number CH-2841.
+          Internal Revenue Code 501 (c) (3) Copyright ©
+        </span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

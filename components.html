@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Components</title>
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap_grid.css" type="text/css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--TOPNAV-->
+    <nav class="row">
+      <h3><a class="turtle-logo" href="index.html">Save the Sea Turtles</a></h3>
+
+      <div class="turtle-right--elements">
+        <ul class="row">
+          <li>
+            <a class="turtle-nav--link" href="#!">About US</a>
+            <i class="material-icons">arrow_drop_down</i>
+          </li>
+          <li>
+            <a class="turtle-nav--link" href="#!">Get Involved</a>
+            <i class="material-icons">arrow_drop_down</i>
+          </li>
+          <li>
+            <a class="turtle-nav--link" href="#!">Store</a>
+            <i class="material-icons">arrow_drop_down</i>
+          </li>
+          <li>
+            <a class="turtle-nav--link" href="society-news.html#turtle-tabs">News</a>
+          </li>
+          <li>
+            <a class="turtle-nav--link" href="#!">Contact</a>
+          </li>
+          <li>
+            <button
+              class="turtle-button turtle-button--primary margin-left--10"
+              onclick="location.href='http://google.com';"
+              type="button"
+            >
+              DONATE
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="turtle-content">
+      <!--Tabs-->
+      <p class="margin-top--50 margin-bottom--20">Tabs</p>
+      <div class="row">
+        <nav class="turtle-tab__row" id="turtle-tabs">
+          <ul>
+            <li>
+              <a class="turtle-tab__link turtle-tab__link-is-active" href="#!"
+                >Active Tab</a
+              >
+            </li>
+            <li>
+              <a class="turtle-tab__link" href="#!">Inactive Tab</a>
+            </li>
+            <li>
+              <a class="turtle-tab__link" href="#!">Inactive Tab</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end row -->
+
+      <h3 class="margin-vertical--40">Buttons</h3>
+
+      <!--Normal BUTTON ROW-->
+      <p class="margin-bottom--20">Normal Buttons</p>
+      <div class="row padding-horizontal--30">
+        <!--Primary-->
+        <button
+          class="turtle-button turtle-button--primary"
+          onclick="location.href='http://google.com';"
+          type="button"
+        >
+          Primary Button
+        </button>
+        <div class="margin-horizontal--10">
+          <!--Secondary-->
+          <button
+            class="turtle-button turtle-button--secondary"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Secondary Button
+          </button>
+        </div>
+
+        <!--Success-->
+        <button
+          class="turtle-button turtle-button--success"
+          onclick="location.href='http://google.com';"
+          type="button"
+        >
+          Success Button
+        </button>
+        <div class="margin-horizontal--10">
+          <!--Warning-->
+          <button
+            class="turtle-button turtle-button--warning"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Warning Button
+          </button>
+
+          <!--Flat-->
+          <button
+            class="turtle-button turtle-button--flat"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Flat Button
+          </button>
+        </div>
+      </div>
+      <!-- end row -->
+
+      <!--SMALL BUTTON ROW-->
+      <p class="margin-top--50 margin-bottom--20">Small Buttons</p>
+      <div class="row padding-horizontal--30">
+        <!--Primary-->
+        <button
+          class="turtle-button turtle-button--primary-small"
+          onclick="location.href='http://google.com';"
+          type="button"
+        >
+          Primary Button
+        </button>
+        <div class="margin-horizontal--10">
+          <!--Secondary-->
+          <button
+            class="turtle-button turtle-button--secondary-small"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Secondary Button
+          </button>
+        </div>
+
+        <!--Success-->
+        <button
+          class="turtle-button turtle-button--success-small"
+          onclick="location.href='http://google.com';"
+          type="button"
+        >
+          Success Button
+        </button>
+        <div class="margin-horizontal--10">
+          <!--Warning-->
+          <button
+            class="turtle-button turtle-button--warning-small"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Warning Button
+          </button>
+
+          <!--Flat-->
+          <button
+            class="turtle-button turtle-button--flat-small"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Flat Button
+          </button>
+        </div>
+      </div>
+      <!-- end row -->
+
+      <!--HEADER BUTTON ROW-->
+      <p class="margin-top--50 margin-bottom--20">Header Button</p>
+      <div
+        class="row padding-horizontal--30 padding-vertical--30"
+        style="background-color:#8c9b9c; border-radius:5px; width:300px;"
+      >
+        <button
+          class="turtle-button turtle-button--header"
+          onclick="location.href='http://google.com';"
+          type="button"
+        >
+          Header Button
+        </button>
+      </div>
+      <!-- end row -->
+      <!-- END BUTTONS -->
+
+      <!-- INPUTS -->
+      <h3 class="margin-vertical--40 margin-top--100">Input Fields</h3>
+      <div class="row">
+        <div>
+          <label class="turtle-label" for="inputID">Label</label><br />
+          <input class="turtle-input" type="text" id="inputID" />
+        </div>
+
+        <div class="margin-left--20">
+          <label class="turtle-label" for="inputID">Label</label><br />
+          <input class="turtle-input--error" type="text" id="inputID" /><br />
+        </div>
+      </div>
+      <!-- END INPUTS -->
+
+      <!-- ICONS & TEXT -->
+      <h3 class="margin-top--100">Icons & their text</h3>
+      <hr style="width:200px; margin:0" />
+
+      <!--
+      =======================
+        GET INVOLVED
+      =======================
+      -->
+      <h5 class="margin-vertical--40">Get Involved Page</h5>
+      <div class="row">
+        <!-- DONATE A BOAT -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-donate-boat.png"
+            alt="Donate a Boat icon"
+            style="width:auto;height:100px;"
+          />
+          <h5 class="turtle-text--uppercase margin-top--20">Donate a Boat</h4>
+          <p class="margin-top--10">
+            We accept boat donations to provide to our sea expeditions and
+            research trips. Donating a boat can help you reduce the docking
+            costs, hassle to sell and deduct any further taxes weighing your
+            unused boat down.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Boat Donation Program
+          </button>
+        </div>
+
+        <!-- ADOPT A NEST -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-adopt-nest.png"
+            alt="Adopt a Nest icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Adopt a Nest</h4>
+          <p class="margin-top--10">
+            The journey from laying to hatching to sea is an ongoing protetion
+            project. Adopting a nest provides the budget to protect the nest and
+            its hatchlings from the egg births to their venture into the sea.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            More about nest adoption
+          </button>
+        </div>
+
+        <!-- DONATE SPARE CHANGE -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-cash-donation.png"
+            alt="Cash Donation icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            Donate Spare Change
+          </h4>
+          <p class="margin-top--10">
+            Every penny goes towards saving our seas by researching, analyzing,
+            protecting and oceanic rehabilitation. Any spare change helps make a
+            wave.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Make a Cash Donation
+          </button>
+        </div>
+      </div>
+
+      <div class="row margin-top--50">
+        <!-- VOLUNTEER -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icn-volunteer.png"
+            alt="Volunteer icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Volunteer</h4>
+          <p class="margin-top--10">
+            We can always use help with caretaking, nest protection, clean-ups
+            and sea restorations. Gain hours and lend a hand to the beaches that
+            surround us.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            Contact Us
+          </button>
+        </div>
+
+        <!-- ELITE SEA TURTLE SOCIETY -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-elite-society.png"
+            alt="ELITE SEA TURTLE SOCIETY icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            ELITE SEA TURTLE SOCIETY
+          </h4>
+          <p class="margin-top--10">
+            he Elite Sea Turtle Society is a community that continues giving to
+            promote, advocate and sponsor research and expeditions. In fact, we
+            would not be able to continue doing what we love without this
+            community.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            About the Society
+          </button>
+        </div>
+
+        <!-- MAGAZINE SUBSCRIPTION -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-magazine.png"
+            alt="Magazine Subscription icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            Subscribe Today
+          </h4>
+          <p class="margin-top--10">
+            Time is of the essence and we know you get busy. Our amazing
+            creatives craft monthly magazines filled with current research
+            findings, news, how you can help and ocean-friendly living measures
+            to ensure our seas go unharmed.
+          </p>
+          <button
+            class="turtle-button turtle-button--primary margin-top--20"
+            onclick="location.href='http://google.com';"
+            type="button"
+          >
+            See Subscription Options
+          </button>
+        </div>
+      </div>
+
+      <!--
+      =======================
+        HOME > WAYS TO GIVE
+      =======================
+      -->
+      <hr style="width:600px; margin:100px 0px 0px 0px" />
+      <h5 class="margin-vertical--40">Home Page | Ways to Give Section</h5>
+      <div class="row">
+        <!-- DONATE A BOAT -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-donate-boat.png"
+            alt="Donate a Boat icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Donate a Boat</h4>
+          <p class="margin-top--10">
+            Donate a boat to save money, taxes and hassle.
+          </p>
+        </div>
+
+        <!-- ADOPT A NEST -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-adopt-nest.png"
+            alt="Adopt a Nest icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Adopt a Nest</h4>
+          <p class="margin-top--10">
+            Adopt a nest for the care, restoration & protexction of an actual
+            nest.
+          </p>
+        </div>
+
+        <!-- DONATE SPARE CHANGE -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-cash-donation.png"
+            alt="Cash Donation icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            Donate Spare Change
+          </h4>
+          <p class="margin-top--10">
+            Cash donation are always welcomed with great gratitude.
+          </p>
+        </div>
+      </div>
+
+      <div class="row margin-top--50">
+        <!-- VOLUNTEER -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icn-volunteer.png"
+            alt="Volunteer icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Volunteer</h4>
+          <p class="margin-top--10">
+            Lend a helping hand where and when it matters.
+          </p>
+        </div>
+
+        <!-- ELITE SEA TURTLE SOCIETY -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-elite-society.png"
+            alt="ELITE SEA TURTLE SOCIETY icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            ELITE SEA TURTLE SOCIETY
+          </h4>
+          <p class="margin-top--10">
+            A scoiety for continuous, ultimate turtle lovers.
+          </p>
+        </div>
+
+        <!-- MAGAZINE SUBSCRIPTION -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-magazine.png"
+            alt="Magazine Subscription icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            Subscribe to Our Magazine
+          </h4>
+          <p class="margin-top--10">
+            Subscribe to our monthly magazines with the latest news and
+            research.
+          </p>
+        </div>
+      </div>
+
+      <!--
+      =======================
+        HOME > DID YOU KNOW
+      =======================
+      -->
+      <div style="background-color:#242424;margin-top:50px; padding:30px;">
+        <h5 class="text-color--white">
+          Home Page | Did You Know section
+        </h5>
+        <div class="row margin-top--30">
+          <!-- Gone by the millions -->
+          <div style="width:410px; margin-left:20px;">
+            <img
+              src="images/icon-turtle.png"
+              alt="Turtle icon"
+              style="width:auto;height:100px;"
+            />
+            <h4 class="margin-top--20 text-color--white">
+              Gone by the millions
+            </h4>
+            <p class="margin-top--10 text-color--white">
+              Sea turtles once roamed the oceans in populations of millions, but
+              over the past few centuries the demand for sea turtle meat, eggs,
+              shell, leather and oil has greatly reduced their numbers.
+            </p>
+          </div>
+
+          <!-- Hatchlings -->
+          <div style="width:410px; margin-left:20px;">
+            <img
+              src="images/icon-eggs.png"
+              alt="Eggs icon"
+              style="width:auto;height:100px;"
+            />
+            <h4 class="margin-top--20 text-color--white">
+              Hatchlings from sand to sea
+            </h4>
+            <p class="margin-top--10 text-color--white">
+              After incubating for about two months, the two-inch long turtles
+              hatch, erupt as a group from their nest in the cool of the night,
+              and scurry down the beach to the sea.
+            </p>
+          </div>
+        </div>
+
+        <div class="row margin-top--50">
+          <!-- whale -->
+          <div style="width:410px; margin-left:20px;">
+            <img
+              src="images/icon-whale.png"
+              alt="whale icon"
+              style="width:auto;height:100px;"
+            />
+            <h4 class="margin-top--20 text-color--white">
+              Not quite a whale weight
+            </h4>
+            <p class="margin-top--10 text-color--white">
+              The smallest sea turtle, the Kemp's Ridley, weighs about 75 to 100
+              pounds when mature, while adults of the largest species, the
+              leatherback, can weigh almost 2,000 pounds and may be eight feet
+              in length.
+            </p>
+          </div>
+
+          <!-- Light -->
+          <div style="width:410px; margin-left:20px;">
+            <img
+              src="images/icon-light.png"
+              alt="light icon"
+              style="width:auto;height:100px;"
+            />
+            <h4 class="margin-top--20 text-color--white">
+              Don't follow the light
+            </h4>
+            <p class="margin-top--10 text-color--white">
+              Many hatchling sea turtles are disoriented by bright lights near
+              beaches and wander away from the ocean to be crushed by cars or
+              stranded. Concern for the plight of sea turtles is growing and
+              people around the world are working to protect them on nesting
+              beaches and at sea.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--
+      =======================
+        ELITE SEA TURTLE SOCIETY > ABOUT
+      =======================
+      -->
+      <h5 class="margin-vertical--40">Elite Sea Turtle Society | About</h5>
+      <div class="row">
+        <!-- EDUCATION -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-education.png"
+            alt="Education icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Education</h4>
+          <p class="margin-top--10">
+            This is the primary goal, in hopes to guarantee the children of
+            tomorrow the benefits of our existing environment that we enjoy
+            today because EXTINCTION IS FOREVER!
+          </p>
+        </div>
+
+        <!-- PROTECTION -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-protection.png"
+            alt="protection turtle icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">Protection</h4>
+          <p class="margin-top--10">
+            The National Save The Sea Turtle Foundation supports active field
+            groups, rehabilitation and research programs and marine life
+            protection and preservation projects. We concentrate on the uphill
+            battle to preserve the fragile ecosystem.
+          </p>
+        </div>
+
+        <!-- AWARENESS -->
+        <div style="width:410px; margin-left:20px;">
+          <img
+            src="images/icon-awareness.png"
+            alt="Awareness icon"
+            style="width:auto;height:100px;"
+          />
+          <h4 class="turtle-text--uppercase margin-top--20">
+            Awareness
+          </h4>
+          <p class="margin-top--10">
+            Keeping our issues in the public eye is most important. We have
+            accepted our mission and set our goals. Our staff, members and
+            volunteers contribute their efforts for our public awareness
+            programs.
+          </p>
+        </div>
+      </div>
+      <!-- END ICONS & TEXT -->
+    </div>
+    <!-- End Container -->
+  </body>
+</html>

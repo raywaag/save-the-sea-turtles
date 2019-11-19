@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700,900&display=swap");
+
+/*
+/////////////////////////////
+COLORS
+/////////////////////////////
+*/
+
+/* use these variables when setting a color 
+instead of trying to remember its hex code */
+
+// MAIN COLORS
+$base-black: #1c1c1c;
+$white: #ffffff;
+$bg-white: #f9ffff;
+$base-gray: #8c9b9c;
+$primary-blue: #468189;
+$secondary-blue: #77aca2;
+$maple: #895946;
+$highlight-on-light: #c2f1ee;
+$highlight-on-dark: #f4e9cd;
+
+// ACTION COLORS
+$error: #d0021b;
+$success: #417505;
+$warning: #e5d225;
+
+/*
+/////////////////////////////
+TYPOGRAPHY
+/////////////////////////////
+*/
+h1 {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 2.2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.8em;
+  color: $base-black;
+}
+
+h4 {
+  font-size: 1.375em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.7em;
+}
+
+h5 {
+  font-size: 1.125em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+h6 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.25em;
+}
+
+p,
+li,
+ul {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.25em;
+  color: $base-black;
+}
+
+// this is a class
+// you need to specify its weight when you use it
+.turtle-text {
+  // this means if the calss is "caption-text-bold"
+  &--bold {
+    font-weight: bold;
+  }
+
+  // this means if the calss is "caption-text-normal"
+  &--normal {
+    font-weight: normal;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+// this is a class, but only has one wieght so you dont need to specify
+.support-text {
+  font-size: 0.75em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+.button-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  &-large {
+    font-size: 1.5em;
+  }
+  &-normal {
+    font-size: 1em;
+  }
+  &-small {
+    font-size: 0.75em;
+  }
+}
+
+/*
+/////////////////////////////
+MATERIAL ICONS
+/////////////////////////////
+*/
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

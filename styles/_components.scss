@@ -1,0 +1,580 @@
+/*
+Universal Styles
+*/
+body {
+  background-color: $bg-white;
+  color: $base-black;
+  letter-spacing: 0.05em;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+::selection {
+  background-color: $highlight-on-light;
+}
+:hover,
+:focus,
+:active {
+  transition: 0.5s;
+}
+
+/*
+CONTAINER
+*/
+.turtle-content {
+  padding: {
+    top: 20px;
+    right: 125x;
+    bottom: 40px;
+    left: 125px;
+  }
+}
+
+/*
+Buttons
+*/
+.turtle-button {
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.1em;
+
+  // Outline PRIMARY BUTTON
+  &.turtle-button--primary-outline {
+    height: 50px;
+    font-size: 1em;
+    border: 2px solid $primary-blue;
+    color: $primary-blue;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #dadada;
+    }
+  }
+
+  // Normal PRIMARY BUTTON
+  &.turtle-button--primary {
+    height: 40px;
+    font-size: 1em;
+    background-color: $primary-blue;
+    color: #fff;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $secondary-blue;
+    }
+  }
+
+  // Normal FLAT BUTTON
+  &.turtle-button--flat {
+    height: 40px;
+    font-size: 1em;
+    color: $primary-blue;
+    background-color: transparent;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $secondary-blue;
+    }
+  }
+
+  // Normal SECONDARY BUTTON
+  &.turtle-button--secondary {
+    height: 40px;
+    font-size: 1em;
+    background-color: $maple;
+    color: #fff;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($maple, 0.7);
+    }
+  }
+
+  // Normal WARNING BUTTON
+  &.turtle-button--warning {
+    height: 40px;
+    font-size: 1em;
+    background-color: $error;
+    color: #fff;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($error, 0.7);
+    }
+  }
+
+  // Normal SUCCESS BUTTON
+  &.turtle-button--success {
+    height: 40px;
+    font-size: 1em;
+    background-color: $success;
+    color: #fff;
+    padding: {
+      top: 10px;
+      right: 15px;
+      bottom: 10px;
+      left: 15px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($success, 0.7);
+    }
+  }
+
+  // SMALL PRIMARY BUTTON
+  &.turtle-button--primary-small {
+    height: 30px;
+    font-size: 0.75em;
+    background-color: $primary-blue;
+    color: #fff;
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 10px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $secondary-blue;
+    }
+  }
+
+  // SMALL FLAT BUTTON
+  &.turtle-button--flat-small {
+    height: 30px;
+    font-size: 0.75em;
+    color: $primary-blue;
+    background-color: transparent;
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 10px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $secondary-blue;
+    }
+  }
+
+  // SMALL SECONDARY BUTTON
+  &.turtle-button--secondary-small {
+    height: 30px;
+    font-size: 0.75em;
+    background-color: $maple;
+    color: #fff;
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 10px;
+    }
+
+    i {
+      vertical-align: bottom;
+      font-size: 1rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($maple, 0.7);
+    }
+  }
+
+  // SMALL WARNING BUTTON
+  &.turtle-button--warning-small {
+    height: 30px;
+    font-size: 0.75em;
+    background-color: $error;
+    color: #fff;
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 10px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($error, 0.7);
+    }
+  }
+
+  // SMALL SUCCESS BUTTON
+  &.turtle-button--success-small {
+    height: 30px;
+    font-size: 0.75em;
+    background-color: $success;
+    color: #fff;
+    padding: {
+      top: 5px;
+      right: 10px;
+      bottom: 5px;
+      left: 10px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba($success, 0.7);
+    }
+  }
+
+  //HEADER BUTTON
+  &.turtle-button--header {
+    height: 68px;
+    font-size: 1.5em;
+    background-color: #fff;
+    color: $primary-blue;
+    padding: {
+      top: 20px;
+      right: 25px;
+      bottom: 20px;
+      left: 25px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}
+
+/*
+Input Fields
+*/
+.turtle-label {
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: calc-lh(1em, 0.104em);
+}
+.turtle-input {
+  background-color: #fff;
+  border: 1px solid $base-gray;
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: calc-lh(1em, 0.104em);
+  padding: {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid $primary-blue;
+  }
+}
+.turtle-select {
+  background-color: #fff;
+  border: 1px solid $base-gray;
+  border-radius: 5px;
+  min-height: 30px;
+  width: 100%;
+  font-size: 0.8em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  padding: {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  &:focus,
+  &:active {
+    border: 2px solid $primary-blue;
+  }
+}
+
+.turtle-input--error {
+  background-color: #fff;
+  border: 2px solid $error;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  line-height: calc-lh(1em, 0.104em);
+  padding: {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+  &:focus,
+  &:active {
+    border: 2px solid $primary-blue;
+  }
+}
+
+/*
+Top Nav
+*/
+.turtle-nav {
+  display: flex;
+  align-items: center;
+
+  .turtle-logo--span {
+    width: 250px;
+    @media screen and (max-width: 500px) {
+      width: 200px;
+    }
+  }
+
+  .turtle-logo {
+    font-weight: 500;
+    color: $base-black;
+
+    @media screen and (max-width: 1210px) {
+      .turtle-nav--link {
+        display: none;
+      }
+      .turtle-nav--menu-toggle {
+        display: inline-block;
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .turtle-right--elements {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+
+    @media screen and (max-width: 500px) {
+      #donateModalBtn {
+        display: none;
+      }
+    }
+
+    .turtle-nav--menu-toggle {
+      display: none;
+      color: $base-black;
+      i {
+        font-size: 1.6rem;
+        &:hover,
+        &:focus {
+          background-color: $highlight-on-light;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1210px) {
+      .turtle-nav--link,
+      .turtle-down--dropdown {
+        display: none;
+      }
+      .turtle-nav--menu-toggle {
+        display: inline-block;
+      }
+    }
+
+    .turtle-nav--link {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $base-black;
+      font-size: 1em;
+      margin-left: 20px;
+      padding: 5px;
+      border-radius: 5px;
+
+      &:last-child {
+        margin-right: 15px;
+      }
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: $highlight-on-light;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+/*
+Tabs
+*/
+.turtle-tab__row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+
+    .turtle-tab__link {
+      text-transform: uppercase;
+      font-size: 0.8em;
+      color: $base-gray;
+      font-family: "Roboto", sans-serif;
+      font-weight: normal;
+      text-align: center;
+      cursor: pointer;
+      padding: 15px 25px;
+      margin: {
+        top: 10px;
+        right: 30px;
+        bottom: 10px;
+        left: 30px;
+      }
+
+      @media screen and (max-width: 1040px) {
+        font-size: 0.4em;
+        padding: 15px 10px;
+        margin: {
+          top: 10px;
+          right: 0px;
+          bottom: 10px;
+          left: 0px;
+        }
+      }
+
+      i {
+        vertical-align: bottom;
+      }
+
+      &-is-active {
+        color: $primary-blue;
+        font-weight: bold;
+        border-bottom: 4px solid $secondary-blue;
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $primary-blue;
+        font-weight: bold;
+        border-bottom: 4px solid $secondary-blue;
+      }
+    }
+  }
+}
+
+// MOBILE NAV
+/* The Overlay (background) */
+.overlay {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(255, 255, 255); /* white fallback color */
+  background-color: rgba(255, 255, 255, 0.95); /* white opacity */
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: $base-black;
+    display: block;
+    transition: 0.5s;
+    &:hover,
+    &:focus {
+      color: $secondary-blue;
+      font-weight: 700;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
